@@ -1,4 +1,4 @@
-# wetherapp
+# weatherapp
 
 react application using hooks redux redux-saga and typescript
 for using app u need api-key from this site and save it to https://openweathermap.org/api
