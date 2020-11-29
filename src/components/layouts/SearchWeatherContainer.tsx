@@ -2,15 +2,15 @@ import { race } from 'redux-saga/effects';
 
 import React from 'react';
 
-import SearchContainerStyle from './SearchContainer.styled';
+import SearchWeatherContainerStyle from './SearchWeatherContainer.styled';
 import SearchForm from '../organisms/SearchForm';
 import Title from '../atoms/Title/Title';
 
 const SearchWeatherContainer:React.FC = () => (
-  <SearchContainerStyle>
+  <SearchWeatherContainerStyle>
     <Title title="Enter city name and press search button" />
     <SearchForm />
-  </SearchContainerStyle>
+  </SearchWeatherContainerStyle>
 );
 
 export default SearchWeatherContainer;

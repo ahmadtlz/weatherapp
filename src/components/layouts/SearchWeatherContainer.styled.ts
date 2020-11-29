@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SearchContainerStyled = styled.div`
+const SearchWeatherContainerStyle = styled.div`
   height:20em;
   width:100vw;
   display:flex;
@@ -10,4 +10,4 @@ const SearchContainerStyled = styled.div`
   background-color:#efefef
 `;
 
-export default SearchContainerStyled;
+export default SearchWeatherContainerStyle;
