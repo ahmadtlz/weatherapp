@@ -1,7 +1,6 @@
-export const GET_WEATHER = 'GET_WEATHER';
 export const GET_WEATHER_START = 'GET_WEATHER_START';
-export const SET_ERROR = 'SET_ERROR';
-
+export const GET_WEATHER_SUCCESS = 'GET_WEATHER_SUCCESS';
+export const GET_WEATHER_FAILURE = 'GET_WEATHER_FAILURE';
 export interface Weather {
   description:string;
   icon:string;
@@ -54,21 +53,22 @@ export interface WeatherError {
 export interface WeatherState {
   data: WeatherData | null;
   loading: boolean;
+  city:string;
   error: string;
 }
 
+  interface GetWeatherStartAction{
+    type:typeof GET_WEATHER_START;
+    payload:string
+  }
 interface GetWeatherAction {
-  type: typeof GET_WEATHER;
+  type: typeof GET_WEATHER_SUCCESS;
   payload:WeatherData
 }
 
-interface GetWeatherStartAction {
-  type: typeof GET_WEATHER_START;
-}
-
 interface SetErrorAction {
-  type:typeof SET_ERROR
+  type:typeof GET_WEATHER_FAILURE
   payload:string;
 }
 
-export type WeatherAction=GetWeatherAction | GetWeatherStartAction | SetErrorAction;
+export type WeatherAction=GetWeatherAction | SetErrorAction |GetWeatherStartAction;

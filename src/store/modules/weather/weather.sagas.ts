@@ -12,17 +12,17 @@ import {
 } from './weather.types';
 
 export function* getWeatherAsync(city:WeatherAction): Generator<
- CallEffect<Response> | PutEffect<WeatherAction>, void, any> {
+CallEffect<Response> | PutEffect<WeatherAction>, void, any> {
   try {
     const res = yield call(fetch,
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${process.env.REACT_APP_API_KEY}`);
+      `https://api.openweathermap.org/data/2.5/weather?q=${city.payload}&appid=${process.env.REACT_APP_API_KEY}`);
 
     if (!res.ok) {
-      const resData: WeatherError = res.json();
+      const resData: WeatherError = yield res.json();
       throw new Error(resData.message);
     }
 
-    const resData: WeatherData = res.json();
+    const resData: WeatherData = yield res.json();
     yield put(getWeatherSuccess(resData));
   } catch (error) {
     yield put(getWeatherFailure(error.message));

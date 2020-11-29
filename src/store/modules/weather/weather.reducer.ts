@@ -1,10 +1,11 @@
 import {
-  WeatherState, WeatherAction, GET_WEATHER, SET_ERROR, GET_WEATHER_START
+  WeatherState, WeatherAction, GET_WEATHER_FAILURE, GET_WEATHER_SUCCESS, GET_WEATHER_START
 } from './weather.types';
 
 const INITIAL_STATE : WeatherState = {
   data: null,
   loading: false,
+  city: '',
   error: ''
 };
 
@@ -13,15 +14,17 @@ const weatherReducer = (state = INITIAL_STATE, action:WeatherAction): WeatherSta
     case GET_WEATHER_START:
       return {
         ...state,
-        loading: true
+        loading: true,
+        city: action.payload
       };
-    case GET_WEATHER:
+    case GET_WEATHER_SUCCESS:
       return {
         data: action.payload,
         loading: false,
+        city: '',
         error: ''
       };
-    case SET_ERROR:
+    case GET_WEATHER_FAILURE:
       return {
         ...state,
         error: action.payload,
