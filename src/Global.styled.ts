@@ -13,9 +13,7 @@ const Global = createGlobalStyle`
 
     body {
       margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-        sans-serif;
+      font-family: 'Roboto', sans-serif;
     }
 
 `;
