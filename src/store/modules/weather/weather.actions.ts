@@ -12,7 +12,7 @@ export const getWeatherSuccess = (resData:WeatherData):WeatherAction => ({
   payload: resData
 });
 
-export const getWeatherFailure = (err:string):WeatherAction => ({
+export const getWeatherFailure = (err = ''):WeatherAction => ({
   type: GET_WEATHER_FAILURE,
   payload: err
 });
