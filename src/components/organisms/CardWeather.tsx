@@ -18,7 +18,7 @@ const CardStyle = styled.div`
   margin-left:auto;
   display:flex;
   flex-direction:row;
-  justify-content:space-between;
+  justify-content:space-around;
 `;
 
 interface WeatherProps {
