@@ -1,7 +1,13 @@
 import React, { FC } from 'react';
+import styled from 'styled-components';
 import SearchButton from '../atoms/Button/SearchButton';
 import TextInput, { TextInputProps } from '../atoms/input/TextInput';
-import SearchStyle from './Search.styled';
+
+const SearchStyle = styled.div`
+  display:flex;
+  justify-content:center;
+  align-items:center;
+`;
 
 const Search:FC<TextInputProps> = ({ onChange, placeholder, value }:TextInputProps) => (
   <SearchStyle>
