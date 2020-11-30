@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const Button = styled.button`
+export const Button = styled.button`
     display: inline-block;
     background: transparent;
     color: inherit;
@@ -10,6 +10,8 @@ const Button = styled.button`
     padding: 0;
     transition: all 200ms ease-in;
     cursor: pointer;
+    width:100%;
+    height:2.5em;
 
 `;
 
@@ -20,6 +22,8 @@ const SearchBtn = styled(Button)`
   border-radius: 2px;
   padding: 12px 36px;
   margin-left:-5em;
+  width:initial;
+  height:initial;
 
   &:hover {
     background: #8a8ff0
