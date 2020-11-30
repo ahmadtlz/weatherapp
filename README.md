@@ -1,8 +1,10 @@
 # weatherapp
+In This app i using this Api https://api.openweathermap.org/data/2.5/weather?q=${city.payload}&appid=${process.env.REACT_APP_API_KEY} 
+so u guys need the api key from this site https://api.openweathermap.org
+after that create .env file and add the REACT_APP_API_KEY key over there
 
-react application using hooks redux redux-saga and typescript
-for using app u need api-key from this site and save it to https://openweathermap.org/api
-.env
+I used :
+  react-hooks redux redux-saga typescript styled-components eslint and prettier
 
 # install
 
